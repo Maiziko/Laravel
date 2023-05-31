@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/logReg', function () {
+    return view('logReg.login');
+});
+
+Route::get('register', function () {
+    return view('logReg.register');
+});
+
+
