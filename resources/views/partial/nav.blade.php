@@ -1,6 +1,6 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="/">
+        <a class="navbar-brand brand-logo" href="index.html">
             <img src="{{ asset('template/images/logo.png') }}" alt="logo" />
         </a>
         <strong class="text-danger brand-logo text-shadow-black">ADMIN</strong>
@@ -8,15 +8,20 @@
             <span class="typcn typcn-th-menu"></span>
         </button>
     </div>
-    
+
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        
         <ul class="navbar-nav navbar-nav-right">
+            @guest
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+            @endguest
+            <!-- <button type="button" class="btn btn-dark" href="{{ route('login') }}">Login</button> -->
+            @Auth
             <li class="nav-item nav-profile dropdown">
-                <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown"
-                    id="profileDropdown">
+                <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown" id="profileDropdown">
                     <img src="{{ asset('template/images/faces/face29.png') }}" alt="profile-image">
-                    <span class="nav-profile-name">Nama profile</span>
+                    <span class="nav-profile-name"> {{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                     <a class="dropdown-item">
@@ -24,7 +29,7 @@
                         Settings
                     </a>
                     <!-- pembuatan div logut -->
-                    @Auth
+
                     <a class="dropdown-item">
                         <i class="typcn typcn-power text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -33,9 +38,10 @@
                             @csrf
                         </form>
                     </a>
-                    @endauth
+
                 </div>
             </li>
+            @endauth
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="typcn typcn-th-menu"></span>
