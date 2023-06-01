@@ -11,7 +11,7 @@ profile
 
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ asset('image/<?= $a->profil_picture ?>') }}"><span class="font-weight-bold">{{ Auth::user()->name }}</span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ asset('image/' .$a->profil_picture) }}"><span class="font-weight-bold">{{ Auth::user()->name }}</span></div>
 
             </div>
 
@@ -25,7 +25,7 @@ profile
                         <div class="col-md-12"><label class="labels">Username : <?= $a->username; ?></label><br>
                             <label class="labels">Nama : {{ Auth::user()->name }} </label>
                             <br>
-                            <label class="labels">Gender : <?= $a->gender; ?></label>
+                            <label class="labels">Gender : {{ $a->gender; }}</label>
                             <br>
                             <label class="labels">Tanggal Lahir : <?= $a->date_of_birth; ?></label>
                         </div>

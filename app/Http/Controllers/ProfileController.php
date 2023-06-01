@@ -20,19 +20,9 @@ class ProfileController extends Controller
         $coba = $id;
 
         $profile = Profile::where('id', $id)->get();
-        // foreach ($profile as $user) {
-        //     var_dump($user->username);
-        //     die;
-        // }
-        // dd($profile);  
+
 
         return View("profile.tampil", ["profile" => $profile]);
-
-        // // $profile = Profile::find($id);
-
-        // $profile = Profile::all();
-        // // dd($profile);
-        // return View("profile.tampil", ["profile" => $profile]);
     }
 
     public function edit($id)
@@ -90,7 +80,6 @@ class ProfileController extends Controller
         // $request->image->move(public_path("image"), $imageName);
 
         //untuk mencari pk dari profil
-
         $profile = Profile::find($hasil);
         // dd($profile);
         $profile->username = $request->input("username");
@@ -104,8 +93,6 @@ class ProfileController extends Controller
         $user = User::find($id);
         $user->name = $request->input("namalengkap");
         $user->save();
-
-
 
         return redirect("/");
     }
