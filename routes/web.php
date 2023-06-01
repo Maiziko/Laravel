@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,8 @@ Route::get('register', function () {
     return view('logReg.register');
 });
 
+
+// Categories
 // C => Create Data
 Route::get('/categories/create', [CategoriesController::class, 'create']);
 Route::post('/categories', [CategoriesController::class, 'store']);
@@ -39,3 +43,7 @@ Route::put('/categories/{id}', [CategoriesController::class, 'update']); // Meth
 
 //D => Delete Data
 Route::delete('/categories/{id}', [CategoriesController::class, 'destroy']);
+
+
+// Product
+Route::resource("/product", ProductController::class);

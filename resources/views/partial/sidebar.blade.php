@@ -146,5 +146,11 @@
             </a>
         </li>
         {{-- Categories akhir --}}
+        <li class="nav-item">
+            <a class="nav-link" href="/product">
+                <i class="typcn typcn-document-text menu-icon"></i>
+                <span class="menu-title">Product</span>
+            </a>
+        </li>
     </ul>
 </nav>
