@@ -5,32 +5,41 @@ profile
 @endsection
 @section('content')
 
-<a href="product/create" class="btn btn-sm btn-primary">Create Product</a>
+<div class="container rounded bg-white mt-5 mb-5">
 
-<div class="row">
-    @forelse ($products as $product)
-    <div class="col-md-3 mt-3">
-        <div class="card">
-            <div class="card-body">
-                <img src="{{ asset('image/' . $product->image) }}" alt="" class="img-fluid">
-                <h5 class="card-title mt-3">{{ $product->name }}</h5>
-                <p class="mb-3">{{ Str::limit( $product->description , 100)}}</p>
-                <a href="/product/{{ $product->id }}" class="btn btn-sm btn-info">Detail</a>
-                <a href="/product/{{ $product->id }}/edit" class="btn btn-sm btn-warning text-white">Edit</a>
-                <form action="/product/{{ $product->id }}" method="POST" class="d-inline">
-                    @csrf
-                    @method('delete')
-                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                </form>
+    <?php foreach ($profile as $a) { ?>
+
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ asset('image/<?= $a->profil_picture ?>') }}"><span class="font-weight-bold">{{ Auth::user()->name }}</span></div>
+
             </div>
+
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings </h4>
+                    </div>
+                    <div class="row mt-2">
+
+                        <div class="col-md-12"><label class="labels">Username : <?= $a->username; ?></label><br>
+                            <label class="labels">Nama : {{ Auth::user()->name }} </label>
+                            <br>
+                            <label class="labels">Gender : <?= $a->gender; ?></label>
+                            <br>
+                            <label class="labels">Tanggal Lahir : <?= $a->date_of_birth; ?></label>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <a class="btn btn-primary profile-button" href="/profile/edit/{{ Auth::user()->id }}" type="button">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
+    <?php } ?>
 
-    @empty
-    <div class="col-md-12">
-        <h3 class="text-center">Data Kosong</h3>
-    </div>
-    @endforelse
-</div>
 
-@endsection
+
+
+    @endsection

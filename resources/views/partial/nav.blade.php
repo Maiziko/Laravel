@@ -24,14 +24,14 @@
                     <span class="nav-profile-name"> {{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
-                        <i class="typcn typcn-cog text-primary"></i>
-                        Settings
+                    <a class="dropdown-item" href="/profile/{{ Auth::user()->id }}" href="/profile/{{ Auth::user()->id }}">
+                        <i class="typcn typcn-cog text-primary"> @csrf Settings </i>
+
                     </a>
                     <!-- pembuatan div logut -->
 
-                    <a class="dropdown-item">
-                        <i class="typcn typcn-power text-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a class=" dropdown-item" href="{{ route('logout') }}">
+                        <i class="typcn typcn-power text-primary" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}</i>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

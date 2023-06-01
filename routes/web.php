@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +48,21 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Product
     Route::resource("/product", ProductController::class);
+
+    //Profile
+    Route::resource('/profile', ProfileController::class);
+    // R => Read Data
+    Route::get('/profile/{id}', [ProfileController::class, 'show']);
+
+
+    //U => Update Data
+    Route::get('/profile/edit/{id}', [ProfileController::class, 'edit']);
+    Route::put('/profile/{id}', [ProfileController::class, 'update']); // Methode put untuk update
 });
+
+
+
+
 
 Auth::routes();
 

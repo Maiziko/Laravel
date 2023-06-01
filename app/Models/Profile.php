@@ -17,6 +17,5 @@ class Profile extends Model
         "profil_picture",
         "date_of_birth",
         "date_of_birth",
-        "profil_picture"
     ];
 }
