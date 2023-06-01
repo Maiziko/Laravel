@@ -14,10 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transaction', function (Blueprint $table) {
+            $table->string('transaction_code', 50);
+            $table->string('user_name');
+            $table->string('email_user');
+            $table->foreign('email_user')->references('email')->on('users');
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('product');
+            $table->string('bank', 45);
+            $table->integer('quantity');
+            $table->integer('total');
+            $table->string('status');
             $table->timestamps();
         });
     }
