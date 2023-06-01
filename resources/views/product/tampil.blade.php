@@ -13,10 +13,10 @@
         <div class="card">
             <div class="card-body">
                 <img src="{{ asset('image/' . $product->image) }}" alt="" class="img-fluid">
-                <h5 class="card-title mt-2">{{ $product->name }}</h5>
-                <h5 class="card-body">{{ Str::limit( $product->description , 100)}}</h5>
-                <a href="/product/{{ $product->id }}" class="btn btn-sm btn-primary">Detail</a>
-                <a href="/product/{{ $product->id }}/edit" class="btn btn-sm btn-warning">Edit</a>
+                <h5 class="card-title mt-3">{{ $product->name }}</h5>
+                <p class="mb-3">{{ Str::limit( $product->description , 100)}}</p>
+                <a href="/product/{{ $product->id }}" class="btn btn-sm btn-info">Detail</a>
+                <a href="/product/{{ $product->id }}/edit" class="btn btn-sm btn-warning text-white">Edit</a>
                 <form action="/product/{{ $product->id }}" method="POST" class="d-inline">
                 @csrf
                 @method('delete')
@@ -31,7 +31,6 @@
         <h3 class="text-center">Data Kosong</h3>
     </div>
     @endforelse
-
 </div>
 
 @endsection
