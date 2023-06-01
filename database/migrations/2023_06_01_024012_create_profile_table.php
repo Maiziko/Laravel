@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('username', 45);
             $table->string('gender', 45);
-            $table->string('date_of_birth', 45);
-            $table->string('profil_picture', 45);
+            // penambahan null di date dan profil
+            $table->string('date_of_birth', 45)->nullable();;
+            $table->string('profil_picture', 45)->nullable();;
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
