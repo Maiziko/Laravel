@@ -20,6 +20,8 @@ return new class extends Migration
             $table->foreign('email_user')->references('email')->on('users');
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('product_id')->references('id')->on('product');
             $table->string('bank', 45);
             $table->integer('quantity');
             $table->integer('total');
