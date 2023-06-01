@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CategoriesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.master');
 });
 
 Route::get('/logReg', function () {
@@ -25,4 +25,17 @@ Route::get('register', function () {
     return view('logReg.register');
 });
 
+// C => Create Data
+Route::get('/categories/create', [CategoriesController::class, 'create']);
+Route::post('/categories', [CategoriesController::class, 'store']);
 
+// R => Read Data
+Route::get('/categories', [CategoriesController::class, 'index']);
+Route::get('/categories/{id}', [CategoriesController::class, 'show']);
+
+//U => Update Data
+Route::get('/categories/{id}/edit', [CategoriesController::class, 'edit']);
+Route::put('/categories/{id}', [CategoriesController::class, 'update']); // Methode put untuk update
+
+//D => Delete Data
+Route::delete('/categories/{id}', [CategoriesController::class, 'destroy']);
