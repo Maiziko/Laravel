@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-    Tambah Category
+    Create Category
 @endsection
 @section('content')
     <form action="/categories" method="POST">

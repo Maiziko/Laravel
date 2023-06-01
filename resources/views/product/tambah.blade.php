@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-    Tambah Product
+    Create Product
 @endsection
 @section('content')
     <form action="/product" method="POST" enctype="multipart/form-data" >
@@ -50,11 +50,11 @@
         <div class="form-group">
             <label>Category</label>
             <select name="categories_id" class="form-control">
-                <option value="">Pilih Categories</option>
                 @forelse ($categories as $category)
+                    <option value="">Pilih Categories</option>
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @empty
-                    <option value="">Data Kosong</option>
+                    <option value="">Data kosong, Belum ada kategori</option>
                 @endforelse
             </select>
         </div>

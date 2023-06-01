@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>CelestialUI Admin</title>
+    <title>Admin Olshop</title>
     <!-- base:css -->
     <link rel="stylesheet" href={{ asset('./template/vendors/typicons.font/font/typicons.css') }}>
     <link rel="stylesheet" href={{ asset('./template/vendors/css/vendor.bundle.base.css') }}>
@@ -71,7 +71,7 @@
                 <section class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 mt-4">
                                 <h1>@yield('title')</h1>
                             </div>
                         </div>

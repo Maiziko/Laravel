@@ -1,11 +1,11 @@
 @extends('layout.master')
 
 @section('title')
-    Tampil Product
+    Product
 @endsection
 @section('content')
 
-<a href="product/create" class="btn btn-sm btn-primary">Tambah Product</a>
+<a href="product/create" class="btn btn-sm btn-primary">Create Product</a>
 
 <div class="row">
     @forelse ($products as $product)

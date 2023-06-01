@@ -1,10 +1,10 @@
 @extends('layout.master')
 
 @section('title')
-    Tampil categories
+    Categories
 @endsection
 @section('content')
-    <a href="/categories/create" class="btn btn-sm btn-primary">Tambah</a>
+    <a href="/categories/create" class="btn btn-sm btn-primary">Create Category</a>
 
     <table class="table">
         <thead>
@@ -33,7 +33,11 @@
                 </tr>
             @empty
                 <tr>
-                    <th>Tidak ada categories</th>
+                    <th>
+                        <div class="col-md-12">
+                            <h3>Data Kosong</h3>
+                        </div>
+                </th>
                 </tr>
             @endforelse
         </tbody>
