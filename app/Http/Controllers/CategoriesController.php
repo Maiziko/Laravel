@@ -23,15 +23,13 @@ class CategoriesController extends Controller
     {
         // validasi data terisi atau tidak 
         $request->validate([
-            'nama' => 'required|alpha|min:5',
-            'umur' => 'required|numeric',
-            'bio' => 'required',
+            'name' => 'required|alpha|min:5',
+            'description' => 'required',
         ]);
 
         DB::table('categories')->insert([
-            'nama' => $request->input('nama'),
-            'umur' => $request->input('umur'),
-            'bio' => $request->input('bio'),
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
         ]);
 
         return redirect('/categories');
@@ -54,17 +52,15 @@ class CategoriesController extends Controller
     public function update($id, Request $request)
     {
         $request->validate([
-            'nama' => 'required|alpha|min:5',
-            'umur' => 'required|numeric',
-            'bio' => 'required',
+            'name' => 'required|alpha|min:5',
+            'description' => 'required',
         ]);
 
         DB::table('categories')
             ->where('id', $id)
             ->update([
-                'nama' => $request->input('nama'),
-                'umur' => $request->input('umur'),
-                'bio' => $request->input('bio'),
+                'name' => $request->input('name'),
+                'description' => $request->input('description'),
             ]);
 
         return redirect('/categories');
