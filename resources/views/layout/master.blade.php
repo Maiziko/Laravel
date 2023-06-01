@@ -137,6 +137,12 @@
     <!-- Custom js for this page-->
     <script src={{ asset('template/js/dashboard.js') }}></script>
     <!-- End custom js for this page-->
+  <script src="{{asset('template/js/swal.min.js')}}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    
+  @stack('scripts')
+
 </body>
 
 </html>

@@ -64,7 +64,7 @@ class ProductController extends Controller
 
 
         $product->save();
-        return redirect("/product");
+        return redirect('/product')->with('status', 'Category created successfully.');
     }
 
     /**

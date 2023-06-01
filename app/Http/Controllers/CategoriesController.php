@@ -32,7 +32,7 @@ class CategoriesController extends Controller
             'description' => $request->input('description'),
         ]);
 
-        return redirect('/categories');
+        return redirect('/categories')->with('status', 'Category created successfully.');
     }
 
     public function show($id)
