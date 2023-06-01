@@ -8,14 +8,14 @@
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label>categories Name</label>
+            <label>Category Name</label>
             <input type="text" name="name" value={{ $categories->name }} class="form-control">
         </div>
         @error('name')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <div class="form-group">
-            <label>categories description</label>
+            <label>Category Description</label>
             <textarea name="description" class="@error('description') is-invalid @enderror form-control" cols="30"
                 rows="10">{{ $categories->description }}</textarea>
         </div>

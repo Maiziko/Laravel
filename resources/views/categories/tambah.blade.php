@@ -7,15 +7,15 @@
     <form action="/categories" method="POST">
         @csrf
         <div class="form-group">
-            <label>categories Name</label>
+            <label>Category Name</label>
             <input type="text" name="name" class="form-control">
         </div>
         @error('name')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <div class="form-group">
-            <label>categories Description</label>
-            <textarea type="text" name="description" class="@error('name') is-invalid @enderror form-control"></textarea>
+            <label>Category Description</label>
+            <textarea type="text" name="description" class="@error('description') is-invalid @enderror form-control"></textarea>
         </div>
         @error('description')
             <div class="alert alert-danger">{{ $message }}</div>
