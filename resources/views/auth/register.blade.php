@@ -54,11 +54,14 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="gender" class="col-md-4 col-form-label text-md-end">gender</label>
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">Gender</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
-
+                                <select name="gender" class="form-control">
+                                    <option value="">Choose Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

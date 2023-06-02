@@ -5,8 +5,12 @@
 
                 <div class="d-flex align-items-center sidebar-profile">
                     <div class="sidebar-profile-image">
-                        <img src="{{ asset('image/' . Auth::user()->profile->profil_picture) }}" alt="profile-image">
+                    <?php if (Auth::user()->profile->profil_picture === null): ?>
+                        <i class="typcn typcn-user-outline mr-0 text-white mr-3" style="font-size: 30px"></i>
+                     <?php else: ?>
+                        <img src="{{ asset('image/' .Auth::user()->profile->profil_picture) }}" alt="profile-image">
                         <span class="sidebar-status-indicator"></span>
+                    <?php endif; ?>
                     </div>
                     <div class="sidebar-profile-name">
                         <p class="sidebar-name">

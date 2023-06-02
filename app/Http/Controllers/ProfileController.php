@@ -55,7 +55,6 @@ class ProfileController extends Controller
                 "username" => "required",
                 "namalengkap" => "required",
                 "gender" => "required",
-                "date" => "required",
                 "image" => "mimes:jpg,png,jpeg|max:2048",
             ]
         );

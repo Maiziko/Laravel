@@ -11,7 +11,11 @@
         <div class="row">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle  mb-3" width="150px" src="{{ asset('image/' . $a->profil_picture) }}">
+                    <?php if ($a->profil_picture === null): ?>
+                    <i class="typcn typcn-user-outline mr-0" style="font-size: 100px; color: #000000;"></i>
+                    <?php else: ?>
+                    <img class="rounded-circle mb-3" style="width: 150px; height: 150px;" src="{{ asset('image/' .$a->profil_picture) }}">
+                    <?php endif; ?>
                     <span class="font-weight-bold">{{ Auth::user()->name }}</span>
                 </div>
             </div>
