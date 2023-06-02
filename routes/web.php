@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,9 @@ Route::group(['middleware' => ['auth']], function () {
     //U => Update Data
     Route::get('/profile/edit/{id}', [ProfileController::class, 'edit']);
     Route::put('/profile/{id}', [ProfileController::class, 'update']); // Methode put untuk update
+
+    //transaction
+    Route::get('/transaction', [TransactionController::class, 'show']);
 });
 
 
