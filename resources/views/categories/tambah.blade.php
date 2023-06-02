@@ -15,7 +15,8 @@
         @enderror
         <div class="form-group">
             <label>Category Description</label>
-            <textarea type="text" name="description" class="@error('description') is-invalid @enderror form-control"></textarea>
+            <textarea name="description" id="myeditorinstance"  class="@error('description') is-invalid @enderror form-control" cols="30"
+            rows="10"></textarea>
         </div>
         @error('description')
             <div class="alert alert-danger">{{ $message }}</div>

@@ -40,14 +40,7 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        <div class="form-group">
-            <label>Description</label>
-            <textarea type="text" name="description" class="@error('description') is-invalid @enderror form-control">{{$product-> description}}</textarea>
-        </div>
-        @error('description')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
+   
         <div class="form-group">
             <label>Category</label>
             <select name="categories_id" class="form-control">
@@ -67,6 +60,13 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
+        <div class="form-group">
+            <label>Description</label>
+            <textarea type="text" id="myeditorinstance" name="description" class="@error('description') is-invalid @enderror form-control">{{$product-> description}}</textarea>
+        </div>
+        @error('description')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
 
 
         <button type="submit" class="btn btn-primary">Submit</button>

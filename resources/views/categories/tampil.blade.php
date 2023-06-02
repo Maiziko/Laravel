@@ -74,6 +74,8 @@
                 title: "Kategori Gagal dihapus, terdapat produk yang terkait dengan kategori ini",
                 icon: "error",
                 confirmButtonText: "Okay",
+            }).then(() => {
+                location.reload();
             });
         }
     });
@@ -84,6 +86,8 @@
         title: "Kategori Berhasil Ditambahkan",
         icon: "success",
         confirmButtonText: "Okay",
+    }).then(() => {
+        location.reload();
     });
 @endif
 </script>

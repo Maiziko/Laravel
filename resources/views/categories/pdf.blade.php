@@ -38,7 +38,7 @@
         <tr>
             <td>{{ $key + 1 }}</td>
             <td>{{ $category->name }}</td>
-            <td>{{ $category->description }}</td>
+            <td>{!! ($category->description) !!}</td>
         </tr>
         @empty
         <tr>

@@ -40,21 +40,16 @@
         @enderror
 
         <div class="form-group">
-            <label>Description</label>
-            <textarea type="text" name="description" class="@error('description') is-invalid @enderror form-control"></textarea>
-        </div>
-        @error('description')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        <div class="form-group">
             <label>Category</label>
             <select name="categories_id" class="form-control">
+                @if ($categories->count() == 0)
+                    <option value="">Data kosong, Belum ada kategori</option>
+                @else 
+                <option value="">Pilih Categories</option>
+                @endif
                 @forelse ($categories as $category)
-                    <option value="">Pilih Categories</option>
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @empty
-                    <option value="">Data kosong, Belum ada kategori</option>
                 @endforelse
             </select>
         </div>
@@ -62,7 +57,13 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-
+        <div class="form-group">
+            <label>Description</label>
+            <textarea type="text" id="myeditorinstance" name="description" class="@error('description') is-invalid @enderror form-control"></textarea>
+        </div>
+        @error('description')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

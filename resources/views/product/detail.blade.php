@@ -12,8 +12,8 @@
                 <h3 class="mb-3">Harga: <small>Rp.{{ $product->price }}</small></h3>
                 <h3 class="mb-3">Stok: <small>{{ $product->stock }}</small></h3>
                 <h3 class="mb-3">Kategori: <small>{{ $categories->find($product->categories_id)->name }}</small></h3>
-                <h3 class="mb-3">Deskripsi Produk:</h3>
-                <p>{{ $product->description }}</p>
+                <h3 class="mt-5">Deskripsi Produk:</h3>
+                <p class="mt-3">{!! ($product->description) !!}</p>
             </div>
             <div class="col-md-6">
                 <img src="{{ asset('image/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid">
