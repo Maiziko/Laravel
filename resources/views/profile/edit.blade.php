@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-Profile
+    Edit Profile
 @endsection
 @section('content')
 
