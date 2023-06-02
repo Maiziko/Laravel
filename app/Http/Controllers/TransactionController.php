@@ -14,4 +14,6 @@ class TransactionController extends Controller
         $transaction = transaction::all();
         return View("transaction.tampil", ["transaction" => $transaction]);
     }
+
+    
 }
