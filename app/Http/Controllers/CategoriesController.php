@@ -24,7 +24,7 @@ class CategoriesController extends Controller
     {
         // validasi data terisi atau tidak 
         $request->validate([
-            'name' => 'required|alpha|min:5',
+            'name' => 'required|alpha',
             'description' => 'required',
         ]);
 
