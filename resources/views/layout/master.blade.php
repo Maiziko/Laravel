@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Admin Olshop</title>
-    <x-head.tinymce-config/>
+    <x-head.tinymce-config />
 
     <!-- base:css -->
     <link rel="stylesheet" href={{ asset('./template/vendors/typicons.font/font/typicons.css') }}>
@@ -83,17 +83,13 @@
 
                     <!-- Default box -->
                     <div class="card">
-                        <div class="card-header">
-
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                    title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                                <i class="fas fa-times"></i>
+                            </button>
                         </div>
                         <div class="card-body">
                             @yield('content')
@@ -139,11 +135,11 @@
     <!-- Custom js for this page-->
     <script src={{ asset('template/js/dashboard.js') }}></script>
     <!-- End custom js for this page-->
-  <script src="{{asset('template/js/swal.min.js')}}"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="{{ asset('template/js/swal.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
-    
-  @stack('scripts')
+
+    @stack('scripts')
 
 </body>
 
