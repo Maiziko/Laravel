@@ -18,4 +18,10 @@ class Profile extends Model
         "date_of_birth",
         "date_of_birth",
     ];
+
+    //relasi table dengan user
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'users_id');
+    }
 }

@@ -5,7 +5,7 @@
 
             <div class="d-flex align-items-center sidebar-profile">
                 <div class="sidebar-profile-image">
-                    <img src="{{ asset('template/images/faces/face29.png') }}" alt="profile-image">
+                    <img src="{{ asset('image/' .Auth::user()->profile->profil_picture) }}" alt="profile-image">
                     <span class="sidebar-status-indicator"></span>
                 </div>
                 <div class="sidebar-profile-name">
