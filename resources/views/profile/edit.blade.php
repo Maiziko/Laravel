@@ -29,13 +29,13 @@
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h4 class="text-right">Profile Settings </h4>
                         </div>
-                        <div class="row mt-2">
+                        <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Username</label><input type="text" class="form-control" placeholder="" value="<?= $a->username; ?>" name="username"></div>
                         </div>
-                        <div class="row mt-2">
+                        <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value="{{ Auth::user()->name }}" name="namalengkap"></div>
                         </div>
-                        <div class="row mt-2">
+                        <div class="row mt-3">
                             <div class="col-md-12">
                                 <label class="labels">Gender</label>
                                 <select name="gender" class="form-control">
@@ -46,10 +46,10 @@
                             </div>
                         </div>
                         
-                        <div class="row mt-2">
+                        <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Tanggal lahir</label><input type="date" class="form-control" placeholder="" value="<?= $a->date_of_birth; ?>" name="date"></div>
                         </div>
-                        <div class="form-group required">
+                        <div class="form-group required mt-3">
                             <label>Image</label>
                             <input type="file" name="image" class="form-control  " value="<?= $a->profil_picture; ?>">
                         </div>
