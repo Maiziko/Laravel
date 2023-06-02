@@ -6,7 +6,7 @@
 
 @section('content')
     <a href="/categories/create" class="btn btn-sm btn-primary">Create Category</a>
-    <a href="/donwload-category" class="btn btn-sm btn-primary">Generate to PDF</a>
+    <a href="/donwload-category" class="btn btn-sm btn-info">Generate to PDF</a>
 
     <table class="table">
         <thead>

@@ -63,6 +63,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get('/donwload-category', PDFController::class . '@DownloadCategory');
+Route::get('/donwload-product', PDFController::class . '@DownloadProduct');
 
 
 Auth::routes();
