@@ -1,17 +1,18 @@
 @extends('layout.master')
 
 @section('title')
-profile
+    profile
 @endsection
 @section('content')
+    <div class="container rounded bg-white mt-5 mb-5">
 
-<div class="container rounded bg-white mt-5 mb-5">
-
-    <?php foreach ($profile as $a) { ?>
+        <?php foreach ($profile as $a) { ?>
 
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ asset('image/' .$a->profil_picture) }}"><span class="font-weight-bold">{{ Auth::user()->name }}</span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                        width="150px" src="{{ asset('image/' . $a->profil_picture) }}"><span
+                        class="font-weight-bold">{{ Auth::user()->name }}</span></div>
 
             </div>
 
@@ -22,24 +23,23 @@ profile
                     </div>
                     <div class="row mt-2">
 
-                        <div class="col-md-12"><label class="labels">Username : <?= $a->username; ?></label><br>
+                        <div class="col-md-12"><label class="labels">Username : <?= $a->username ?></label><br>
                             <label class="labels">Nama : {{ Auth::user()->name }} </label>
+                            <br>
+                            <label class="labels" @disabled(true)>Email : {{ Auth::user()->email }} </label>
                             <br>
                             <label class="labels">Gender : {{ $a->gender }}</label>
                             <br>
-                            <label class="labels">Tanggal Lahir : <?= $a->date_of_birth; ?></label>
+                            <label class="labels">Tanggal Lahir : <?= $a->date_of_birth ?></label>
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <a class="btn btn-primary profile-button" href="/profile/edit/{{ Auth::user()->id }}" type="button">Edit Profile</a>
+                        <a class="btn btn-primary profile-button" href="/profile/edit/{{ Auth::user()->id }}"
+                            type="button">Edit Profile</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    <?php } ?>
-
-
-
-
+        <?php } ?>
     @endsection
