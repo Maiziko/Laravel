@@ -61,8 +61,7 @@
                                 </div>
                                 <!-- Remember me akhir -->
                                 <div class="mt-3">
-                                    <button type="submit"
-                                        class="btn btn-block btn-danger btn-lg font-weight-medium auth-form-btn">
+                                    <button type="submit" class="btn btn-block btn-danger">
                                         {{ __('Login') }}
                                     </button>
                                 </div>
@@ -73,12 +72,13 @@
                                             <div class="form-check-label d-flex justify-content-center text-black">
                                                 Don't Have an Account ?
                                             </div>
-                                            <a class="btn btn-block btn-info auth-form-btn"
-                                                href="{{ route('register') }}">{{ __('Register') }}</a>
+                                            <a class="btn btn-block btn-info"
+                                                href="{{ route('register') }}">{{ __('Register') }}
+                                            </a>
                                     </div>
                                     @endif
                                     <div class="mt-3">
-                                        <a class="btn btn-block btn-primary auth-form-btn" href="{{ url('/') }}">
+                                        <a class="btn btn-block btn-primary" href="{{ url('/') }}">
                                             {{ __('Login As Guest') }}
                                         </a>
                                     </div>
