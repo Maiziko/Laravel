@@ -15,6 +15,9 @@ use GuzzleHttp\Handler\Proxy;
 
 class ProfileController extends Controller
 {
+
+
+
     public function show($id)
     {
         $coba = $id;
@@ -63,6 +66,9 @@ class ProfileController extends Controller
             $newImageName = time() . "." . $request->image->extension();
             $request->image->move(public_path("image"), $newImageName);
             // $profile->image = $newImageName;
+        } else {
+            $newImageName = $gambar;
+            // dd($newImageName);
         }
 
         // if ($request->has("image")) {

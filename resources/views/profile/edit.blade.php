@@ -34,11 +34,11 @@ profile
                             <div class="col-md-12"><label class="labels">Gender</label><input type="text" class="form-control" placeholder="" value="<?= $a->gender; ?>" name="gender"></div>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-md-12"><label class="labels">Tanggal lahir</label><input type="text" class="form-control" placeholder="" value="<?= $a->date_of_birth; ?>" name="date"></div>
+                            <div class="col-md-12"><label class="labels">Tanggal lahir</label><input type="date" class="form-control" placeholder="" value="<?= $a->date_of_birth; ?>" name="date"></div>
                         </div>
                         <div class="form-group required">
                             <label>Image</label>
-                            <input type="file" name="image" class="form-control">
+                            <input type="file" name="image" class="form-control  " value="<?= $a->profil_picture; ?>">
                         </div>
                     </div>
 
