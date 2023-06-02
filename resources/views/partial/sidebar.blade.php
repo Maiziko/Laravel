@@ -45,7 +45,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/transaction">
                     <i class="typcn typcn-credit-card menu-icon"></i>
-                    <span class="menu-title">Transaksi</span>
+                    <span class="menu-title">Transaction</span>
                 </a>
             </li>
         @endauth

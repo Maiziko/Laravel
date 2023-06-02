@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-    Transaksi
+    Transaction
 @endsection
 
 @section('content')
