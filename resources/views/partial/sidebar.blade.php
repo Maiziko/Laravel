@@ -29,7 +29,7 @@
             {{-- Categories Mulai --}}
             <li class="nav-item">
                 <a class="nav-link" href="/categories">
-                    <i class="typcn typcn-document-text menu-icon"></i>
+                    <i class="typcn typcn-tags menu-icon"></i>
                     <span class="menu-title">Categories</span>
                 </a>
             </li>
@@ -37,14 +37,14 @@
             {{-- Product Mulai --}}
             <li class="nav-item">
                 <a class="nav-link" href="/product">
-                    <i class="typcn typcn-document-text menu-icon"></i>
+                    <i class="typcn typcn-shopping-bag menu-icon"></i>
                     <span class="menu-title">Product</span>
                 </a>
             </li>
             {{-- Product akhir --}}
             <li class="nav-item">
                 <a class="nav-link" href="/transaction">
-                    <i class="typcn typcn-document-text menu-icon"></i>
+                    <i class="typcn typcn-credit-card menu-icon"></i>
                     <span class="menu-title">Transaksi</span>
                 </a>
             </li>
