@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-profile
+Profile
 @endsection
 @section('content')
 
@@ -11,8 +11,10 @@ profile
 
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ asset('image/' .$a->profil_picture) }}"><span class="font-weight-bold">{{ Auth::user()->name }}</span></div>
-
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mb-3" width="150px" height="150px" src="{{ asset('image/' .$a->profil_picture) }}">
+                    <span class="font-weight-bold">{{ Auth::user()->name }}</span>
+                </div>
             </div>
 
             <div class="col-md-5 border-right">
