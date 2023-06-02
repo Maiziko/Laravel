@@ -100,6 +100,6 @@ class ProfileController extends Controller
         $user->name = $request->input("namalengkap");
         $user->save();
 
-        return redirect("/");
+        return redirect("/profile/$id");
     }
 }
