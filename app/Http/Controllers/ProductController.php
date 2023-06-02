@@ -17,7 +17,8 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
-        return View("product.tampil", ["products" => $product]);
+        $categories = Categories::all();
+        return View("product.tampil", ["products" => $product, "categories" => $categories]);
     }
 
     /**
@@ -76,7 +77,8 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view("product.detail", ["product" => $product]);
+        $categories = Categories::all();
+        return view("product.detail", ["product" => $product, "categories" => $categories]);
     }
 
     /**

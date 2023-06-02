@@ -6,12 +6,13 @@
 
 @section('content')
     <a href="/categories/create" class="btn btn-sm btn-primary">Create Category</a>
+    <a href="/donwload-category" class="btn btn-sm btn-primary">Generate to PDF</a>
 
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">No</th>
-                <th scope="col">Nama</th>
+                <th scope="col">Name</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>

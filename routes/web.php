@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PDFController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +62,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 
-
+Route::get('/donwload-category', PDFController::class . '@DownloadCategory');
 
 
 Auth::routes();
