@@ -22,7 +22,11 @@
                 <li class="nav-item nav-profile dropdown">
                     <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown"
                         id="profileDropdown">
+                        <?php if (Auth::user()->profile->profil_picture === null): ?>
+                        <i class="typcn typcn-user-outline mr-0 mr-3" style="font-size: 30px"></i>
+                        <?php else: ?>
                         <img src="{{ asset('image/' . Auth::user()->profile->profil_picture) }}" alt="profile-image">
+                        <?php endif; ?>
                         <span class="nav-profile-name"> {{ Auth::user()->name }} </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
