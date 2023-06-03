@@ -9,7 +9,7 @@ use App\Models\Product;
 
 
 
-class PdfController extends Controller
+class PDFController extends Controller
 {
     public function DownloadCategory()
     {
