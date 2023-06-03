@@ -20,7 +20,7 @@ yang mana admin dapat mengelola data produk, data kategori yang di jual. serta a
 ## Link Video
 
 Link Demo Aplikasi
-link.com
+https://www.youtube.com/watch?v=r_iE-9m6F04&ab_channel=Abib
 
 Link Deploy
-link.com
+http://awnproject.my.id/

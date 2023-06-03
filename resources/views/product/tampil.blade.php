@@ -6,7 +6,7 @@
 
 @section('content')
     <a href="product/create" class="btn btn-sm btn-primary">Create Produk</a>
-    <a href="/donwload-product" class="btn btn-sm btn-info">Generate to PDF</a>
+    <a href="donwload-product" class="btn btn-sm btn-info">Generate to PDF</a>
 
     <div class="row">
         @forelse ($products as $product)
