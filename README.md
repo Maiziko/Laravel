@@ -23,4 +23,4 @@ Link Demo Aplikasi
 https://www.youtube.com/watch?v=r_iE-9m6F04&ab_channel=Abib
 
 Link Deploy
-http://awnproject.my.id/
+http://admin-olshop.sanbercodeapp.com/
